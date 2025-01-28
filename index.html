@@ -38,6 +38,20 @@
         <p>Voici l'image du token :</p>
         <img src="pout512.png" alt="Image du Token Poutine">
     </main>
+<p>Adresse Mint du Token :</p>
+<input type="text" id="mintAddress" value="Fv1cAPnRNJKdwhV4B1LMzH9z7WT4ZyZZ4o1evHnDfeCH" readonly>
+<button onclick="copyMint()">Copier</button>
 
+<script>
+    function copyMint() {
+        var copyText = document.getElementById("mintAddress");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // Pour mobile
+        navigator.clipboard.writeText(copyText.value);
+        alert("Adresse copiée : " + copyText.value);
+    }
+</script>
+<p>Voir sur <a href="https://solscan.io/token/TON_ADRESSE_MINT" target="_blank">Solscan</a></p>
+        
 </body>
 </html>
